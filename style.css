@@ -1,0 +1,160 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(243, 243, 243);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.instagram-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 60%;
+    height: 100vh;
+}
+
+.instagram-phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+}
+
+.instagram-phone img {
+    height: 50rem;
+}
+
+.instagram-continue {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column; /* Inverte os eixos X e Y no Align e Justifify-content */
+    width: 50%;
+    min-height: 34rem;
+}
+
+.group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 100%;
+    padding: 1.3rem 0;
+    border: 1px solid lightgray;
+}
+
+.group:nth-child(1) { /*Seleciona um objeto em específico quando houverem objetos com o mesmo nome de classe */
+    min-height: 19rem;
+}
+
+.instagram-logo {
+    height: 3rem;
+}
+
+.profile-photo {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-photo img {
+    height: 6rem;
+}
+
+.instagram-login {
+    background-color: #0895f6;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.instagram-logout {
+    color: #0895f6;
+    margin-top: 1rem;
+}
+
+.not-account {
+    color: rgb(160, 160, 160);
+}
+
+.link-blue {
+    color: #0895f6; 
+}
+
+.get-the-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.3rem 0;
+}
+
+.download {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly; /*Usado devido a trabalharmos com coluna e itens um debaixo do outro*/
+    align-items: center;
+    padding: 1rem;
+}
+
+.app-download {
+    height: 3rem;
+    width: 10rem;
+    background-size: cover;
+}
+
+.app-download:nth-child(1) {
+    background-image: url('./img/apple-button.png');
+}
+
+.app-download:nth-child(2) {
+    background-image: url('./img/googleplay-button.png');
+}
+
+/*Queries de mídia para método responsibilidade*/
+
+@media (max-width: 1024px) { /*Definido para tela (Tablet) largura 1024px > O container geral terá 90% */
+    .instagram-wrapper {
+        width: 90%;
+    }
+}
+
+@media (max-width: 650px) { /*Definido para tela (Smartphone) largura 650px > O container geral terá 90% */
+    body {
+        background-color: white;
+    }
+
+    .group {
+        border: none; /*Preferi usar o valor 'Nome' ao invés de expecificar a Border como Transparent */
+    }
+
+    .instagram-wrapper {
+        width: 90%;
+    }
+
+    .instagram-phone { /*Assim que a largura atingir 650px, a img instagram.celular vai ficar oculta*/
+        display: none;
+    }
+
+    .instagram-continue { /*Assim que a largura atingir 650px, este container e as div's legadas, irão ficar com 100% width  */
+        width: 100%;
+    }
+
+}
+
